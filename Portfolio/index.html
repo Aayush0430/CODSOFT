@@ -1,13 +1,276 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" href="linkico.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+      integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400..800&family=Bungee+Hairline&family=Charmonman:wght@400;700&family=Corinthia:wght@400;700&family=Delius+Swash+Caps&family=Edu+SA+Beginner:wght@400..700&family=Poiret+One&family=Warnes&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>MyFolio</title>
+    <style>
+      .tooltip {
+        position: relative;
+        display: inline-block;
+      }
+
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: max-content;
+        background-color: rgba(43, 42, 42, 0.317);
+        color: #aca4a4;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        font-family: cursive;
+
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        bottom: 80%;
+        left: 95%;
+        margin-left: -60px;
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <nav id="nav">
+      <span id="nav-title"><a href="index.html">Aayush</a></span>
+      <ul id="nav-buttons">
+        <a href="#home" class="nav-button-each nav-button-1">Home</a>
+        <a href="#about" class="nav-button-each">About</a>
+        <a href="#projects" class="nav-button-each">Projects</a>
+        <a href="#footer" class="nav-button-each">Contact</a>
+      </ul>
+      <button id="menu" onclick="menuToggle()">
+        <i class="ri-menu-3-line"></i>
+      </button>
+    </nav>
+    <div id="home" onclick="menuOff()">
+      <img src="aayu.jpg" id="profile-pic" alt="" />
+      <div class="profile-details">
+        <span id="hello"></span>
+        <p id="i-am">I'm Aayush</p>
+        <p id="intro">~Web developer and a student~</p>
+        <p id="intro2">
+          I am Aayush Prajapati, currently a student and Web Developer. I love
+          making websites.
+        </p>
+        <br />
+        <p id="find-me">Find me on:</p>
+        <br />
+        <ul class="socials">
+          <li>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/aayush.prajapati.90"
+              ><i class="ri-facebook-box-line"></i
+            ></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.instagram.com/aaush__p/"
+              ><i class="ri-instagram-line"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/aayush-prajapati-3068232b6/"
+              ><i class="ri-linkedin-box-fill"></i
+            ></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://github.com/Aayush0430"
+              ><i class="ri-github-fill"></i
+            ></a>
+          </li>
+          <li>
+            <a target="_blank" href="mailto:aayush.prajapati0430@gmail.com"
+              ><i class="ri-mail-line"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="about" onclick="menuOff()">
+      <h3>About Me</h3>
+      <div class="about-body">
+        <p id="greetings">
+          Greetings! I'm Aayush, a dedicated web developer passionate about
+          crafting exceptional digital experiences. Proficient in HTML, CSS, and
+          JavaScript, I specialize in bringing creativity and functionality to
+          the web. From designing captivating user interfaces to optimizing
+          performance, I thrive on delivering websites that engage and delight
+          users. Let's collaborate and turn your ideas into unforgettable online
+          experiences!
+        </p>
+        <div class="skills">
+          <h4>My skills</h4>
+          <div class="skill-images">
+            <div class="tooltip">
+              <img src="img/html.png" alt="" />
+              <span class="tooltiptext">HTML</span>
+            </div>
+            <div class="tooltip">
+              <img src="img/php.png" alt="" />
+              <span class="tooltiptext">PHP</span>
+            </div>
+            <div class="tooltip">
+              <img src="img/css.png" alt="" />
+              <span class="tooltiptext">CSS</span>
+            </div>
+            <div class="tooltip">
+              <img src="img/js.png" alt="" />
+              <span class="tooltiptext">Javascript</span>
+            </div>
+            <div class="tooltip">
+              <img src="img/java.png" alt="" />
+              <span class="tooltiptext">Java</span>
+            </div>
+            <div class="tooltip">
+              <img src="img/python.png" alt="" />
+              <span class="tooltiptext">Pyhton</span>
+            </div>
+            <div class="tooltip">
+              <img src="img/mysql.png" alt="" />
+              <span class="tooltiptext">MySql</span>
+            </div>
+            <div class="tooltip">
+              <img src="img/git.png" alt="" />
+              <span class="tooltiptext">Git</span>
+            </div>
+            <div class="tooltip">
+              <img src="img/bootstrap.png" alt="" />
+              <span class="tooltiptext">Bootstrap</span>
+            </div>
+            <!-- <img src="img/" alt="" /> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="projects" onclick="menuOff()">
+      <h3>My projects</h3>
+      <p>Projects Loading<span id="load-dots"></span></p>
+    </div>
+
+    <div id="footer" onclick="menuOff()">
+      <!-- <h3>Contact Section</h3> -->
+      <div class="contact-me">
+        <h3>Ready for a new project?</h3>
+        <h5>Let's get started!</h5>
+        <button id="contact-me-btn"><p>Contact me</p></button>
+      </div>
+
+      <div class="footer-nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </div>
+      <div class="footer-email" onclick="copyEmail()">
+        <b><li>Email:</li></b>
+        <li>aayush.prajapati0430@gmail.com</li>
+      </div>
+      <div class="footer-socials">
+        <div>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/aayush.prajapati.90"
+              ><i class="ri-facebook-box-line"></i>Facebook
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.instagram.com/aaush__p/"
+              ><i class="ri-instagram-line"></i>Instagram
+            </a>
+          </li>
+        </div>
+        <div>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/aayush-prajapati-3068232b6/"
+              ><i class="ri-linkedin-box-fill"></i>Linked In
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://github.com/Aayush0430"
+              ><i class="ri-github-fill"></i>GitHub
+            </a>
+          </li>
+        </div>
+      </div>
+    </div>
   </body>
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed("#hello", {
+      strings: [
+        "Hello",
+        "नमस्ते",
+        "Nǐ hǎo",
+        "Hallo",
+        "Konnichiwa",
+        "Ciao",
+        "Bonjour",
+      ],
+      typeSpeed: 90,
+      backSpeed: 50,
+      backDelay: 3000,
+      startDelay: 1000,
+      loop: true,
+    });
+  </script>
+  <script>
+    var typed = new Typed("#load-dots", {
+      strings: ["....."],
+      typeSpeed: 450,
+      backSpeed: 400,
+      startDelay: 100,
+      loop: true,
+    });
+  </script>
+  <script>
+    function copyEmail() {
+      navigator.clipboard.writeText("aayush.prajapati0430@gmail.com"); //copy into clipboard
+      // alert("Email copied!");
+    }
+    function menuToggle() {
+      if (document.getElementById("nav-buttons").style.right == "0%") {
+        document.getElementById("nav-buttons").style.right = "-100%";
+      } else {
+        document.getElementById("nav-buttons").style.right = "0%";
+      }
+    }
+    function menuOff() {
+      document.getElementById("nav-buttons").style.right = "-100%";
+    }
+    // function colorRed() {
+    //   const navi = document.getElementById("nav");
+    //   nav.classList.toggle("show");
+    //   console.log(navi);
+    // }
+  </script>
 </html>

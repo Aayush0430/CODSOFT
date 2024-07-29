@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400..800&family=Bungee+Hairline&family=Charmonman:wght@400;700&family=Corinthia:wght@400;700&family=Dancing+Script:wght@400..700&family=Delius+Swash+Caps&family=Edu+SA+Beginner:wght@400..700&family=Poiret+One&family=Warnes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Merienda:wght@300..900&family=Mr+De+Haviland&family=Sofia&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-padding-top:15vh;
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    background-color:  #191919;
+    width:100vw;
+}
+#nav{
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height:15vh;
+    margin: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #00000034;
+    backdrop-filter: blur(4px);  
+}
+#nav-title{
+    outline: none;
+    color: white;
+    background: linear-gradient(to top right,rgb(242, 77, 77),white,rgb(78, 78, 223));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    width:max-content ;
+    /* flex: 1; */
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-left: 10rem;
+    font-family: "Dancing Script", cursive;
+    /* font-family: "Charmonman", cursive; */
+    /* font-family: "Bungee Hairline", sans-serif; */
+}
+#nav-title:hover{
+        background: linear-gradient(to top right, rgb(242, 77, 77), white, rgb(78, 78, 223));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 300% 300%;
+    animation: gradient 1s ease-in-out infinite;
+
+}
+@keyframes gradient {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+#nav-buttons{
+    margin-right: 10vw;
+    list-style: none;
+    display: flex;
+    /* background-color: blue; */
+    /* flex: 2; */
+    transition: 0.9s ease all;
+}
+
+.nav-button-each {
+    outline: none;
+    font-family: "Delius Swash Caps", cursive;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 100;
+    margin-left:5vw;
+    transition: 0.3s ease all;
+}
+.nav-button-each:hover{
+    transform: translateY(3px);
+
+}
+.nav-button-each:hover{
+    background: linear-gradient(to top right, rgb(242, 116, 116), white, rgb(105, 105, 247));
+             -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+
+}
+a{
+    text-decoration: none;
+    color: white; 
+}
+#menu{
+    cursor: pointer;
+    /* padding: 0; */
+    margin:0 10vw 0 0;
+    display: none;
+    border: none;
+    background-color: rgb(25, 25, 25);
+}
+#home i,#nav i{ 
+    font-size: 2rem;
+    color:white;
+    background-color: rgb(25, 25, 25);
+}
+/* home body part */
+#home{
+    /* background-color: red; */
+    height: 84vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#profile-pic{
+    border: 10px solid rgba(12, 12, 12, 0.447);
+    border-radius: 50%;
+    margin-right: 3rem;
+    height:55vh;
+    filter: grayscale(0.3);
+    /* filter: blur(0px); */
+    /* mix-blend-mode:  multiply; */
+    /* -webkit-filter: invert(1);  invert image
+        filter: invert(1); */
+}
+
+
+.profile-details{/* details*/
+    margin-left: 5rem;
+    color: white;
+    width: 450px;
+}
+#hello{
+    font-size: 2.1rem;
+    font-weight: bold;
+    /* font-family: "Poiret One", sans-serif; */
+    /* font-family: "Warnes", cursive; */
+    font-family: "Merienda", cursive;
+}
+#i-am{
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: "Merienda", cursive;
+    /* font-family: "Poiret One", sans-serif; */
+    
+}
+#intro{
+    border-radius:30px 10px;
+    margin: 10px 0;
+    font-size: 1.05rem;
+    color: black;
+    /* background-color: white; */
+    background-image: linear-gradient(to top right,rgb(251, 120, 120),white,rgb(176, 176, 245));
+    font-weight: 900;
+    padding: 5px  10px;
+    font-family: "Poiret One", sans-serif;
+    /* border-radius: ; */
+    width: max-content;
+}
+#intro2{
+    font-family: "Poiret One", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+#find-me{
+    font-family: "Poiret One", sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+        line-height: 22px;
+            letter-spacing: 1px;
+}
+.socials{
+    display: flex;
+}
+.socials i{
+    cursor: pointer;
+    margin-right: 10px;
+}
+.socials li{
+    transition:0.3s all ease;
+    list-style: none;
+}
+.socials li i:hover{
+    background: linear-gradient(to top right, rgb(242, 116, 116), white, rgb(105, 105, 247));
+    -webkit-background-clip: text;  
+    -webkit-text-fill-color: transparent; 
+}.socials li:hover{
+    transform: scale(1.5);
+}
+.burger{
+    
+    position: absolute;
+    right:-60vw;
+    top: 0;
+    background-color: aqua;
+    height: 100vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+}
+.show {
+    background-color: red;
+}
+
+#about {
+    width: 100vw;
+    height: 100vh;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: cyan; */
+    /* height: max-content; */
+}
+
+.about-body {
+    /* background-color: pink; */
+    padding: 0 5vw;
+    display: flex;
+}
+
+#about h3 {
+    color: white;
+    font-size: 2.8rem;
+    font-family: "Merienda", cursive; 
+    text-align: center;
+    font-weight: 900;
+    padding: 40px 0 60px 0;
+}
+
+#about h4 {
+    color: white;
+    /* background-color: red; */
+    font-size: 2rem;
+    font-family: "Lobster", sans-serif;
+    text-align: center;
+        /* font-family: "Dancing Script", cursive; ---cursive*/
+    font-style:  normal;
+    font-weight: lighter;
+    padding: 0 0 10px 0;
+}
+
+#greetings {
+    width: 40vw;
+    /* background-color: blue; */
+
+    font-size: 1.1rem;
+    font-family: "Poiret One", sans-serif;
+    font-weight: 900;
+    line-height: 22px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: white;
+    padding: 2vh 5vw;
+}
+
+.skills {
+    width: 60vw;
+    ;
+    border-right: 6px double rgba(255, 255, 255, 0.09);
+    border-left: 6px double rgba(255, 255, 255, 0.09);
+    border-radius: 10px;
+}
+.skills h4{
+    /* background-color: blue; */
+    text-align: center;
+}
+.skill-images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.skill-images img{
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 40% 20%;
+    box-shadow:2px 2px 10px rgba(255, 255, 255, 0.292) ;
+    padding: 5px;
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+}
+#projects{
+    width: 100vw;
+    height: 100vh;
+    
+}
+#projects h3{
+    color: white;
+        font-size: 2.8rem;
+        font-family: "Merienda", cursive;
+        text-align: center;
+        font-weight: 900;
+        padding: 0px 0 60px 0;
+}
+#projects p{
+    color:white;
+    text-align: center;
+    margin: 100px 0;
+    font-size:1.8rem;
+    font-family: "Dancing Script", cursive; 
+}
+#footer{
+    color: white;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: "Poiret One", sans-serif;
+    height: 25vh;
+    background-color: rgba(60, 57, 57, 0.557);
+    padding: 20vh 10vw 0 10vw;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+#footer .contact-me{
+    line-height: 2.2rem;
+    position: absolute;
+    padding: 20px 0 10px 20px;
+    background-color: #606369;
+    height: 13vh;
+    width: 60vw;
+    top: -20%;
+    left: 20vw;
+    
+}
+#footer h3{
+    color: white;
+    font-size: 2rem;
+    font-family: "Lobster", sans-serif;
+    font-weight: 100;
+    margin-left: 20px;
+    
+}
+#footer h5{
+    color: black;
+    margin-left: 20px;
+    font-size: 1.4rem;
+    font-family: "Dancing Script", cursive;
+    
+} 
+#footer #contact-me-btn{
+    position: absolute;
+    background-color: #999d9f;
+    border: none;
+    margin: none;
+    padding: 10px;
+    font-family: "Poiret One", sans-serif;
+    top:32px;
+    font-weight: 1000;
+    font-size: 1.2rem;
+    font-style: italic;
+    right: 2vw;
+    transition: all 0.2s ease;
+}
+#contact-me-btn p{
+    transition: all 0.3s ease;
+}
+#contact-me-btn:hover{
+    transform: scale(1.1);
+}
+#contact-me-btn:hover p{
+    
+    background: linear-gradient(to top right , rgb(242, 116, 116), rgb(35, 32, 32), rgb(105, 105, 247));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#footer li{
+    list-style: none;
+    transition: 0.3s all ease;
+}
+.footer-nav li{
+    line-height: 1.8rem;
+    font-size: 1.2rem;
+}
+.footer-email {
+    cursor: pointer;
+    cursor:-webkit-grab ;
+    
+}
+.footer-socials i{
+    font-size:1.4rem ;
+    color: white;
+}
+.footer-nav li:hover{
+    transform: scale(1.2);
+    background: linear-gradient(to right, rgb(242, 116, 116), white, rgb(105, 105, 247));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.footer-socials li:hover {
+    background: linear-gradient(to right, rgb(242, 116, 116), white, rgb(105, 105, 247));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.2);
+}
+
+
+@media only screen and (width<500px) {
+    html{
+        scroll-padding-top: 10vh;
+    }
+    #home{
+        flex-direction: column;
+        justify-content: start;
+    }
+    #profile-pic{
+        margin: 0 0 0 0px;
+        height:40vh;
+    }
+    #nav{
+        height:10vh;
+        background-color: #191919;
+        backdrop-filter:unset;
+    }
+    #nav-title{
+        font-size: 2.5rem;
+
+       margin-left:3rem; 
+    }
+    #nav-buttons{
+        margin:0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:flex-start;
+        width: 70%;
+        height: 90vh;
+        position: fixed;
+        top: 10vh; 
+        right: -100%;
+        z-index: 100;
+        background-color: #191919e1;
+        /* background-color: RED; */
+        /* display: none; */
+    }
+    .nav-button-1{
+        margin-top: 60px;
+    }
+    .nav-button-each{
+        /* background-color: red; */
+        width: 100%;
+        text-align: center;
+        padding:20px 0 ;
+    }
+    .profile-details{
+        margin-left: 2vw;
+        width:80vw;
+    }
+    #hello{
+        font-size: 2rem;
+    }
+    #i-am{
+        font-size: 3rem;
+    }
+    #intro{
+        font-size:1rem;
+    }
+    #intro2{
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    #menu{
+        display: block;
+    }
+    #about{
+        /* height: max-content; */
+        height: 90vh;
+    }
+    #about h3{
+        font-size: 1.9rem;
+        font-weight: 700;
+        padding-bottom: 0;
+    }
+    #about h4{
+        font-family: "Merienda", cursive;
+        font-size: 1.9rem;
+        font-weight: 700;
+        padding:10px 0 0 0;
+    }
+    .about-body {
+        flex-direction: column;
+    }
+    #greetings{
+        width: 80vw;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+    .skills{
+        border: none;
+        width: 90vw;
+    }
+    .skills h4{
+        margin-bottom: 20px;
+    }
+    .skill-images{  
+        /* justify-content: space-evenly; */
+    }
+    .skill-images img{
+        height: 35px;
+        width: 35px;
+    }
+    #projects{
+        margin-top: 10px;
+    }
+    #projects h3{
+        font-size: 1.9rem;
+        font-weight: 700;
+        padding-bottom: 0;
+    }
+    #footer{
+        /* height: 40vh; */
+        height: 35vh;
+        flex-direction: column;
+        padding-top: 40px ;
+    }
+    #footer .contact-me {
+    line-height: 1.7rem;
+        height: 8vh;
+        width: 70vw;
+        left: 15vw;
+        top: -15%;
+        padding: 10px 0 6px 15px;
+    }
+    #footer h3 {
+        font-size: 1.3rem;
+        font-family: "Lobster", sans-serif;
+        margin-left: 0;
+        font-weight: 100;
+    }
+    #footer h5 {
+        margin-left: 0;
+        font-size: 1rem;
+        font-family: "Dancing Script", cursive;
+
+    }
+    #footer #contact-me-btn {
+        font-size: .8rem;
+        position: absolute;
+        padding: 6px;
+        top: 37px;
+        right: 2vw;
+    }
+    .footer-nav{
+
+        /* display: flex; */
+        display: none;
+        /* margin-top: 15apx; */
+        /* justify-content: space-around; */
+    }
+    .footer-email{
+        text-align: center;
+    }
+    .footer-socials{
+        display: flex;
+        justify-content: space-around;
+        
+    }
+    
+}
+    
