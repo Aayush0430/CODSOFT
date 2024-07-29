@@ -7,6 +7,12 @@ function App() {
   function handle(e) {
     setvalue(value + e.target.innerHTML);
   }
+  function handlezero(e) {
+    if (value == "0") {
+    } else {
+      setvalue(value + e.target.innerHTML);
+    }
+  }
 
   function equal() {
     setvalue(eval(value));
@@ -45,7 +51,7 @@ function App() {
         <button onClick={handle}>9 </button>
         <button onClick={handle}>-</button>
         <button onClick={handle}>.</button>
-        <button onClick={handle}>0</button>
+        <button onClick={handlezero}>0</button>
         <button className="span-two" onClick={equal}>
           =
         </button>
