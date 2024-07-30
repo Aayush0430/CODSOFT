@@ -1,4 +1,4 @@
-niimport { useState } from "react";
+import { useState } from "react";
 import "./style.css";
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
   }
   function Delete() {
     setvalue(value.toString().slice(0, -1));
-  } 
+  }
 
   return (
     <div className="outer">
