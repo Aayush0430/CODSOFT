@@ -127,7 +127,25 @@ a{
         filter: invert(1); */
 }
 
+#resume-button{
+    border:1px solid white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    
+    font-family: "Poiret One", sans-serif;
+    font-weight: bold;
+}
 
+
+#resume-button>i{
+    font-size: 1.3rem;
+    background-color: inherit;
+}
+#resume-button:hover{
+    
+    background-color: rgb(79, 78, 78);
+}
 .profile-details{/* details*/
     margin-left: 5rem;
     color: white;
@@ -174,6 +192,7 @@ a{
 }
 .socials{
     display: flex;
+    margin-bottom: 20px;
 }
 .socials i{
     cursor: pointer;
@@ -282,26 +301,7 @@ a{
     width: 60px;
     margin: 10px;
 }
-#projects{
-    width: 100vw;
-    height: 100vh;
-    
-}
-#projects h3{
-    color: white;
-        font-size: 2.8rem;
-        font-family: "Merienda", cursive;
-        text-align: center;
-        font-weight: 900;
-        padding: 0px 0 60px 0;
-}
-#projects p{
-    color:white;
-    text-align: center;
-    margin: 100px 0;
-    font-size:1.8rem;
-    font-family: "Dancing Script", cursive; 
-}
+
 #footer{
     color: white;
     font-size: 1rem;
@@ -340,7 +340,7 @@ a{
     font-family: "Dancing Script", cursive;
     
 } 
-#footer #contact-me-btn{
+#footer #openModalBtn{
     position: absolute;
     background-color: #999d9f;
     border: none;
@@ -354,13 +354,13 @@ a{
     right: 2vw;
     transition: all 0.2s ease;
 }
-#contact-me-btn p{
+#openModalBtn p{
     transition: all 0.3s ease;
 }
-#contact-me-btn:hover{
+#openModalBtn:hover{
     transform: scale(1.1);
 }
-#contact-me-btn:hover p{
+#openModalBtn:hover p{
     
     background: linear-gradient(to top right , rgb(242, 116, 116), rgb(35, 32, 32), rgb(105, 105, 247));
     -webkit-background-clip: text;
@@ -398,7 +398,66 @@ a{
 }
 
 
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    /* background-color: red; */
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    /* border: 1px solid #888; */
+    width: 28.5%;
+    height: 50%;
+    /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 @media only screen and (width<500px) {
+    .modal-content {
+            /* background-color: red; */
+            margin: 15% auto;
+            /* 15% from the top and centered */
+            padding: 20px;
+            /* border: 1px solid #888; */
+            width: 70%;
+            height: 50%;
+            /* Could be more or less, depending on screen size */
+        }
     html{
         scroll-padding-top: 10vh;
     }
@@ -537,11 +596,11 @@ a{
         font-family: "Dancing Script", cursive;
 
     }
-    #footer #contact-me-btn {
+    #footer #openModalBtn{
         font-size: .8rem;
         position: absolute;
         padding: 6px;
-        top: 37px;
+        top: 20px;
         right: 2vw;
     }
     .footer-nav{

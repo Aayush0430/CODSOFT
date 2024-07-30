@@ -19,11 +19,13 @@
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lobster&display=swap"
       rel="stylesheet"
     />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400..800&family=Bungee+Hairline&family=Charmonman:wght@400;700&family=Corinthia:wght@400;700&family=Delius+Swash+Caps&family=Edu+SA+Beginner:wght@400..700&family=Poiret+One&family=Warnes&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="form.css" />
     <title>MyFolio</title>
     <style>
       .tooltip {
@@ -111,6 +113,10 @@
             ></a>
           </li>
         </ul>
+        <a id="resume-button" href="resume.pdf"
+          >Resume
+          <i class="ri-download-line"></i>
+        </a>
       </div>
     </div>
     <div id="about" onclick="menuOff()">
@@ -169,17 +175,85 @@
         </div>
       </div>
     </div>
-    <div id="projects" onclick="menuOff()">
-      <h3>My projects</h3>
-      <p>Projects Loading<span id="load-dots"></span></p>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <div class="contact-form">
+          <h1>Get in touch</h1>
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input
+              type="hidden"
+              name="access_key"
+              value="6c46f7ba-aced-4b75-bb21-fa8d1b31aedc"
+            />
+
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+          </form>
+        </div>
+      </div>
     </div>
 
+    <!-- Projects -->
+    <div id="projects" onclick="menuOff()">
+      <h3>My projects</h3>
+      <div class="project-list">
+        <a class="project-each" href="https://codsoft-topaz.vercel.app/">
+          <img src="img/calc.png" alt="" />
+          <p>React Calculator</p>
+        </a>
+        <a class="project-each" href="#">
+          <img src="img/job.png" alt="" />
+          <p>Job portal</p>
+        </a>
+        <a class="project-each" href="#">
+          <img src="img/food.png" alt="" />
+          <p>Food ordering Site</p>
+        </a>
+      </div>
+
+      <!-- <p>Projects Loading<span id="load-dots"></span></p> -->
+    </div>
+
+    <!-- Contact -->
     <div id="footer" onclick="menuOff()">
       <!-- <h3>Contact Section</h3> -->
       <div class="contact-me">
         <h3>Ready for a new project?</h3>
         <h5>Let's get started!</h5>
-        <button id="contact-me-btn"><p>Contact me</p></button>
+        <button id="openModalBtn">
+          <p>Contact me</p>
+        </button>
       </div>
 
       <div class="footer-nav">
@@ -223,18 +297,18 @@
       </div>
     </div>
   </body>
-
+  <script src="script.js"></script>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script>
     var typed = new Typed("#hello", {
       strings: [
         "Hello",
         "नमस्ते",
-        "Nǐ hǎo",
-        "Hallo",
-        "Konnichiwa",
-        "Ciao",
-        "Bonjour",
+        // "Nǐ hǎo",
+        // "Hallo",
+        // "Konnichiwa",
+        // "Ciao",
+        // "Bonjour",
       ],
       typeSpeed: 90,
       backSpeed: 50,
