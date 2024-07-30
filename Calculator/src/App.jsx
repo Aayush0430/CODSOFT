@@ -48,7 +48,7 @@ function App() {
         <button onClick={handle}>+</button>
         <button onClick={handle}>7</button>
         <button onClick={handle}>8</button>
-        <button onClick={handle}>9 </button>
+        <button onClick={handle}>9</button>
         <button onClick={handle}>-</button>
         <button onClick={handle}>.</button>
         <button onClick={handlezero}>0</button>
